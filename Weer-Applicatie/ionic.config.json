@@ -1,0 +1,7 @@
+{
+  "name": "Weer-Applicatie",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
