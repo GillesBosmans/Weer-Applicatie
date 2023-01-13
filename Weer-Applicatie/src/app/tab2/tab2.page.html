@@ -1,17 +1,100 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Weer
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-searchbar [value]="searchLocation" debounce="500" (ionChange)="GetDataFromsearchLocation($event)"></ion-searchbar>
+    </ion-row>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+    <ion-row>
+      <ion-col>{{res.name}}</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>Datum: {{convertTime(res.dt)}}</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>{{res.main.temp}}°C</ion-col>
+      <ion-col>
+        <img src="http://openweathermap.org/img/wn/{{ res.weather[0].icon}}@2x.png">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>Voelt aan als: {{res.main.feels_like}}°C</ion-col>
+      <ion-col>{{res.weather[0].description}}</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>minimum: {{res.main.temp_min}}°C</ion-col>
+      <ion-col>maximum: {{res.main.temp_max}}°C</ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-card color="medium">
+        <ion-card-header>
+          <ion-card-title>Windsnelheid</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{res.wind.speed}}km/u
+        </ion-card-content>
+      </ion-card>
+      <ion-card color="medium">
+        <ion-card-header>
+          <ion-card-title>Windrichting</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{res.wind.deg}}
+        </ion-card-content>
+      </ion-card>
+
+    </ion-row>
+
+
+    <ion-row>
+      <ion-card color="medium">
+        <ion-card-header>
+          <ion-card-title>Vochtigheid</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{res.main.humidity}}%
+        </ion-card-content>
+      </ion-card>
+      <ion-card color="medium">
+        <ion-card-header>
+          <ion-card-title>luchtdruk</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{res.main.pressure}}hPa
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-card color="medium">
+        <ion-card-header>
+          <ion-card-title>Zon komt op om</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{convertTime(res.sys.sunrise)}}
+        </ion-card-content>
+      </ion-card>
+      <ion-card color="medium">
+        <ion-card-header>
+          <ion-card-title>Zon gaat onder om</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{convertTime(res.sys.sunset)}}
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </ion-grid>
 </ion-content>

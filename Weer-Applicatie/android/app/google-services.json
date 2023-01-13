@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "873043448008",
+    "project_id": "weer-applicatie",
+    "storage_bucket": "weer-applicatie.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:873043448008:android:acd547aa8b1c4e82b6d5fd",
+        "android_client_info": {
+          "package_name": "com.bosmans.gilles.weerApplicatie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "873043448008-rvtogkq3v8uta8mtqct6e44g1t30iolm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bosmans.gilles.weerApplicatie",
+            "certificate_hash": "71e26e72cd463291aaa054281709ee1534d5534d"
+          }
+        },
+        {
+          "client_id": "873043448008-pce0oeluehjeleocnoenqr66ppb1sqje.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCto27eQeTNK53k29IavzyM2Ktn0dnCr-4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "873043448008-pce0oeluehjeleocnoenqr66ppb1sqje.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

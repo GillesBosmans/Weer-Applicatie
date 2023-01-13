@@ -1,8 +1,8 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import {CapacitorConfig} from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'Weer-Applicatie',
+  appId: 'com.bosmans.gilles.weerApplicatie',
+  appName: ' Weer-Applicatie',
   webDir: 'www',
   bundledWebRuntime: false
 };

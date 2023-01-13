@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name"> Weer-Applicatie</string>
+    <string name="title_activity_main"> Weer-Applicatie</string>
+    <string name="package_name">com.bosmans.gilles.weerApplicatie</string>
+    <string name="custom_url_scheme">com.bosmans.gilles.weerApplicatie</string>
+</resources>
